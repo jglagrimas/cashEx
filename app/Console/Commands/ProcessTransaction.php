@@ -58,7 +58,7 @@ class ProcessTransaction extends Command
         $withHeaders = true;
         $csvResultArray = $csvReader->read($filePath,$withHeaders);
         $cashTranscationRepository = new CashTranscationRepository($csvResultArray);
-        print_r($csvResultArray);
+        
         foreach ( $csvResultArray as  $transactionRecord) {
             switch ($transactionRecord['operation_type']) {
                 case ConstVar::OPERATION_TYPE_CASH_OUT:
