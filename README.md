@@ -17,8 +17,8 @@
  * it will output result on the command line
 
 ### Running Unit Test
-** go to root folder
-** type
+* go to root folder
+* type
 ```shell
 	./vendor/bin/phpunit --testdox
 ```
