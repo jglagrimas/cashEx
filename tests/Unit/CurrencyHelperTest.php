@@ -11,7 +11,7 @@ use App\Helpers\CurrencyConversion;
 class CurrencyHelperTest extends TestCase
 {
     /**
-     * A basic unit test example.
+     * Test if convertion JPY to EUR is correct
      *
      * @return void
      */
@@ -30,7 +30,7 @@ class CurrencyHelperTest extends TestCase
 
 
      /**
-     * A basic unit test example.
+     * Test if convertion USD to EUR is correct
      *
      * @return void
      */
@@ -47,7 +47,11 @@ class CurrencyHelperTest extends TestCase
         $this->assertEquals($result->getAmount(), $testMoney['expected_conversion']);
     }
 
-
+    /**
+     * Test if convertion EUR to USD is correct
+     *
+     * @return void
+     */
     public function test_conversion_EUR_to_USD()
     {
 
@@ -60,6 +64,13 @@ class CurrencyHelperTest extends TestCase
     	$result = CurrencyConversion::convertEURToOtherCurrency($testMoney['amount'],$testMoney['currency_to_convert']);
         $this->assertEquals($result->getAmount(), $testMoney['expected_conversion']);
     }
+
+
+    /**
+     * Test if convertion EUR to JPY is correct
+     *
+     * @return void
+     */
     public function test_conversion_EUR_to_JPY()
     {
 

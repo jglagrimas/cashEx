@@ -217,12 +217,14 @@ class CashTranscationRepository
         $maxCashOutPerWeek = new money(ConstVar::CASH_OUT_PER_WEEK_DISC_IN_EUR,ConstVar::BASE_CURRENCY);
 
         //Check if amount cash out exceed per week and cash transaction count not exceed
-        if($totalWeekTransactionInEUR->isLt($maxCashOutPerWeek) && count($userWeekTransaction) < ConstVar::MAX_TRANSACTION_PER_WEEK){
+        if($totalWeekTransactionInEUR->isLt($maxCashOutPerWeek) 
+            && count($userWeekTransaction) < ConstVar::MAX_TRANSACTION_PER_WEEK)
+        {
 
             $totalWeekTransactionAndAmount = new money(
-                $amountInEUR->getAmount() + $totalWeekTransactionInEUR->getAmount(),
-                ConstVar::BASE_CURRENCY
-            );
+                    $amountInEUR->getAmount() + $totalWeekTransactionInEUR->getAmount(),
+                    ConstVar::BASE_CURRENCY
+                );
 
             if($amountInEUR->isGt($maxCashOutPerWeek)  || $totalWeekTransactionAndAmount->isGt($maxCashOutPerWeek)){
 

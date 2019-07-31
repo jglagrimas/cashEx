@@ -6,10 +6,11 @@ use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use App\Helpers\DateTime;
+
 class DateTimeHelperTest extends TestCase
 {
     /**
-     * A basic unit test example.
+     * success if the date is on the same week
      *
      * @return void
      */
@@ -21,7 +22,7 @@ class DateTimeHelperTest extends TestCase
     }
 
      /**
-     * A basic unit test example.
+     * fail checking if the date is on the same week
      *
      * @return void
      */

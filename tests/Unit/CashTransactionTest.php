@@ -14,7 +14,7 @@ class CashTransactionTest extends TestCase
 
 
     /**
-     * A basic unit test example.
+     * testing cash in commission
      *
      * @return void
      */
@@ -37,7 +37,7 @@ class CashTransactionTest extends TestCase
     }
 
       /**
-     * A basic unit test example.
+     * testing cash out legal user type commission
      *
      * @return void
      */
@@ -61,7 +61,8 @@ class CashTransactionTest extends TestCase
 
 
      /**
-     * A basic unit test example.
+     * Cash out usert type natural cash out amoung lower than limit 1000
+     * without pass transaction on the week
      *
      * @return void
      */
@@ -85,7 +86,8 @@ class CashTransactionTest extends TestCase
 
 
       /**
-     * A basic unit test example.
+     * Cash out usert type natural cash out amoung higher than limit 1000
+     * without pass transaction on the week
      *
      * @return void
      */
@@ -107,8 +109,8 @@ class CashTransactionTest extends TestCase
         $this->assertEquals($commission->ceil()->getAmount(), $expectedCommission);
     }
 
-          /**
-     * A basic unit test example.
+    /**
+     * cash out natural with 3 transaction on the week.
      *
      * @return void
      */
